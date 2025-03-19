@@ -20,6 +20,10 @@ const conn = mongoose.connect('mongodb+srv://rajatrandai7:8408900279rR@cluster0.
 })
 
 
+app.get('/',(req,res)=>{
+    res.send('server is live');
+})
+
 app.post('/signup', async (req, res) => {
 
     let u = await users.find({ email: req.body.email });
